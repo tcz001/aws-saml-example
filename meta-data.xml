@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" validUntil="2018-01-25T03:45:24Z"
+                     cacheDuration="PT1517283924S" entityID="http://hic.huawei.com">
+  <md:IDPSSODescriptor WantAuthnRequestsSigned="false"
+                       protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIICdDCCAd2gAwIBAgIJAKoIjn40iOcAMA0GCSqGSIb3DQEBCwUAMFMxCzAJBgNVBAYTAkNOMRIwEAYDVQQIDAlHdWFuZ2RvbmcxETAPBgNVBAcMCFNoZW56aGVuMQ8wDQYDVQQKDAZIdWF3ZWkxDDAKBgNVBAsMA0hJQzAeFw0xODAxMjMwMjIyNDRaFw0yODAxMjMwMjIyNDRaMFMxCzAJBgNVBAYTAkNOMRIwEAYDVQQIDAlHdWFuZ2RvbmcxETAPBgNVBAcMCFNoZW56aGVuMQ8wDQYDVQQKDAZIdWF3ZWkxDDAKBgNVBAsMA0hJQzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAvKTHXGlK0wXLSKeqEtokx3gD7z6TWz91tdOl96hjrV0ynv5LqUKF8pGHXK/Gf3W0+GjPkHbzWMg5bNW2H63YiEtzENIEkK/TxlYmRiowT5HP5cGQegOz4lItlkDTFXVA/4UdeZi0nXi7WaPS9ldDjqSlC/J8l5MrDvy71WJsfqcCAwEAAaNQME4wHQYDVR0OBBYEFNA85NdCsMNkDjUDhwQWDEgovAXgMB8GA1UdIwQYMBaAFNA85NdCsMNkDjUDhwQWDEgovAXgMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADgYEAPQYfT6zQF9SY1NKY+/jVN3h0JKtRBNU8NRRHqawtYM5v0z4CA0EDu+Ak0TjshyKAIYLoSAMV3803tJeOoObvkG4ojv30Hr767SUoYSa9caCRYiE2P1GzZvHP2s667/sxV1t2kI11UYeEgpgMCKB5WrP5y4lkx9SpHok/wXenv7E=
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:KeyDescriptor use="encryption">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIICdDCCAd2gAwIBAgIJAKoIjn40iOcAMA0GCSqGSIb3DQEBCwUAMFMxCzAJBgNVBAYTAkNOMRIwEAYDVQQIDAlHdWFuZ2RvbmcxETAPBgNVBAcMCFNoZW56aGVuMQ8wDQYDVQQKDAZIdWF3ZWkxDDAKBgNVBAsMA0hJQzAeFw0xODAxMjMwMjIyNDRaFw0yODAxMjMwMjIyNDRaMFMxCzAJBgNVBAYTAkNOMRIwEAYDVQQIDAlHdWFuZ2RvbmcxETAPBgNVBAcMCFNoZW56aGVuMQ8wDQYDVQQKDAZIdWF3ZWkxDDAKBgNVBAsMA0hJQzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAvKTHXGlK0wXLSKeqEtokx3gD7z6TWz91tdOl96hjrV0ynv5LqUKF8pGHXK/Gf3W0+GjPkHbzWMg5bNW2H63YiEtzENIEkK/TxlYmRiowT5HP5cGQegOz4lItlkDTFXVA/4UdeZi0nXi7WaPS9ldDjqSlC/J8l5MrDvy71WJsfqcCAwEAAaNQME4wHQYDVR0OBBYEFNA85NdCsMNkDjUDhwQWDEgovAXgMB8GA1UdIwQYMBaAFNA85NdCsMNkDjUDhwQWDEgovAXgMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADgYEAPQYfT6zQF9SY1NKY+/jVN3h0JKtRBNU8NRRHqawtYM5v0z4CA0EDu+Ak0TjshyKAIYLoSAMV3803tJeOoObvkG4ojv30Hr767SUoYSa9caCRYiE2P1GzZvHP2s667/sxV1t2kI11UYeEgpgMCKB5WrP5y4lkx9SpHok/wXenv7E=
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                            Location="http://hic.huawei.com/sp"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor>

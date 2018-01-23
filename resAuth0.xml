@@ -1,0 +1,53 @@
+<saml2p:Response xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol" ID="_ff05ccbde15cf0741806"  Version="2.0" IssueInstant="2018-01-23T10:15:11Z"  Destination="https://manage.auth0.com/tester/samlp">
+  <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">urn:tcz001.auth0.com</saml:Issuer>
+  <saml2p:Status>
+    <saml2p:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+  </saml2p:Status>
+  <saml:Assertion xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Version="2.0" ID="_EnSDMwWU7Vmq8PfIFRfGVPbqX6fQYwvl" IssueInstant="2018-01-23T10:15:11.119Z">
+    <saml:Issuer>urn:tcz001.auth0.com</saml:Issuer>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+        <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+        <Reference URI="#_EnSDMwWU7Vmq8PfIFRfGVPbqX6fQYwvl">
+          <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+          </Transforms>
+          <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+          <DigestValue>F9c3xKW4oHmch04yEWjKjDriaug=</DigestValue>
+        </Reference>
+      </SignedInfo>
+      <SignatureValue>jaJRjo/zUKFEQmw+XdIC3jnQagSZQ3JPXJUD43dpTKeMfvw9ir1tKxwXpKQtianyxRfRTQXhLYSAH9OOWLAtMlcav+f1RleR6d2gyFKLzEHF9WYD1VEz8tQVmbbOQA61l5A7lEWfahbRWPljF+amhfrBqmBlfI9hUGSbCDbyH99haqKSVgROtXtQQdBvhAz3jR1X8t48cuxcC3Q7QG39y8MSCf5Aw1uBYD2b9RRSj5+hbE+3iip2nDTzP9mGyn4y2WgHchyl9jkpG1SIvhGrfGQ7dgqjokC8YipguDLrD3FIHiCy8fyweGfCu1Vt1Ojdk+1JarrfwD4Il/6IxMrVsQ==</SignatureValue>
+      <KeyInfo>
+        <X509Data>
+          <X509Certificate>MIIC+zCCAeOgAwIBAgIJH8S9MlH9sRBCMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNVBAMTEHRjejAwMS5hdXRoMC5jb20wHhcNMTgwMTE4MDI0MjIwWhcNMzEwOTI3MDI0MjIwWjAbMRkwFwYDVQQDExB0Y3owMDEuYXV0aDAuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlgVtp2sWXWdwQdgyv65nECG48/4Z/NxVfzkwZUE6hGnkGbmRitbCiT2KvzEvE3K/fbaasEGC4TzQmcvLR3G6F9cHsCRgf6ZpsUvuvUtlJKuJYgVIAtdNkzh0VHlpH/GpL7CE1ebs0umBJjcSRop3ouQvk4gH/hNMRAffuDva+O1O/s4IDUdC7+JTR93yRyIkNn5l8rJSVQrOcRwf3SNt+Wf/sorVVzFymsJ/RXZ58YlnryeW+SDM1SOSjob0fXHwt418A3WuOlUfZZYvSXFXhPwsg0Y9yODIuJr8270zwr3fPdd/hPMnRV2qtWx+S5hcqf23ntZG2dI4JOmLmWMRxQIDAQABo0IwQDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBQZOm74bZiwsC4Uj9f+gNQUe2/VEzAOBgNVHQ8BAf8EBAMCAoQwDQYJKoZIhvcNAQELBQADggEBABuOgH9hytPD1Fyc5+OhBgpcZByib9bp8cvAgdSnZwAscYYcOa8lM5wyuurMtc/AzFnpixl9PFKkc6WTOpDEkwgeQ6SCUY5bTn0HlNGqglOQ/HyfsJIkVg5eNg9AS68b8X3bdFwaTFGYU/sFw+0hwv7yj04579WyeEscjc5E93/dcuspcpWGAK0pxrAhBAHaa1Cw2IZgERmWE/qzZJLPcEzIhHrdq9e6Sxx3UbyLO4jwyzu9tJlmgWP0SjxHLhUEHlfCbrooQToBXek4GbAcM7wrGTvLfNdvAxNRww3z0BmX8YmA22iH9xmns2lyuv8fEGmrqL71QpKt4gC1DABGb3w=</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </Signature>
+    <saml:Subject>
+      <saml:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent">fan.torchz@gmail.com</saml:NameID>
+      <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+        <saml:SubjectConfirmationData NotOnOrAfter="2018-01-23T11:15:11.119Z" Recipient="https://manage.auth0.com/tester/saml2p"/>
+      </saml:SubjectConfirmation>
+    </saml:Subject>
+    <saml:Conditions NotBefore="2018-01-23T10:15:11.119Z" NotOnOrAfter="2018-01-23T11:15:11.119Z">
+      <saml:AudienceRestriction>
+        <saml:Audience>https://signin.aws.amazon.com/saml</saml:Audience>
+      </saml:AudienceRestriction>
+    </saml:Conditions>
+    <saml:AuthnStatement AuthnInstant="2018-01-23T10:15:11.119Z" SessionIndex="_zxENczVXDvemJgPi6AJfI4nEkudvteRK">
+      <saml:AuthnContext>
+        <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified</saml:AuthnContextClassRef>
+      </saml:AuthnContext>
+    </saml:AuthnStatement>
+    <saml:AttributeStatement xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <saml:Attribute Name="https://aws.amazon.com/SAML/Attributes/Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+        <saml:AttributeValue xsi:type="xs:string">arn:aws:iam::493306989415:role/ec2admin,arn:aws:iam::493306989415:saml-provider/mysaml</saml:AttributeValue>
+      </saml:Attribute>
+      <saml:Attribute Name="https://aws.amazon.com/SAML/Attributes/RoleSessionName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+        <saml:AttributeValue xsi:type="xs:string">Fan Jiang</saml:AttributeValue>
+      </saml:Attribute>
+    </saml:AttributeStatement>
+  </saml:Assertion>
+</saml2p:Response>
