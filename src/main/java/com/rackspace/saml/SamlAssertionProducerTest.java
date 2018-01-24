@@ -31,17 +31,21 @@ public class SamlAssertionProducerTest {
         producer.setPublicKeyLocation("/Users/twer/dev/security/hwIAM/saml-generator/saml.crt");
 
         HashMap<String, List<String>> attributes = new HashMap<String, List<String>>();
-        attributes.put("https://aws.amazon.com/SAML/Attributes/Role", Arrays.asList("arn:aws:iam::493306989415:role/ec2admin,arn:aws:iam::493306989415:saml-provider/mysaml"));
+        attributes.put("https://aws.amazon.com/SAML/Attributes/Role",
+                Arrays.asList("arn:aws:iam::493306989415:role/ec2admin,arn:aws:iam::493306989415:saml-provider/mysaml",
+                        "arn:aws:iam::493306989415:role/rdsReadOnlySAML,arn:aws:iam::493306989415:saml-provider/mysaml"));
+        attributes.put("https://aws.amazon.com/SAML/Attributes/RoleSessionName", Arrays.asList("hahaha"));
 
-        Response responseInitial = producer.createSAMLResponse("", new DateTime(), attributes, "urn:tcz001.auth0.com", 5, "https://signin.aws.amazon.com/saml");
+        Response responseInitial = producer.createSAMLResponse("fan.torchz@gmail.com", new DateTime(), attributes, "hic.huawei.com", 5, "https://signin.aws.amazon.com/saml");
 
         ResponseMarshaller marshaller = new ResponseMarshaller();
         Element element = marshaller.marshall(responseInitial);
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        XMLHelper.writeNode(element, baos);
+        HashMap<String, Object> config = new HashMap<String, Object>();
+        config.put("xml-declaration", false);
+        XMLHelper.writeNode(element, baos, config);
         String responseStr = new String(baos.toByteArray());
-
         System.out.println(responseStr);
 
         String encodedResponseStr = Base64.getEncoder().encodeToString(responseStr.getBytes());
@@ -54,11 +58,11 @@ public class SamlAssertionProducerTest {
         fileWriter.close();
     }
 
-    public static String html(String s){
+    public static String html(String samlResponse) {
 
         String targetURL = "https://signin.aws.amazon.com/saml";
         // Build the HTML File
-        String htmlString="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n";
+        String htmlString = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n";
         htmlString += "<html>\n";
         htmlString += "<head>\n";
         htmlString += "<title>SAML Test Assertion</title>\n";
@@ -66,7 +70,7 @@ public class SamlAssertionProducerTest {
         htmlString += "<body onload=\"submit_form();\">\n<form name=\"myform\" action=\"";
         htmlString += targetURL + "\" method=\"POST\">\n";
         htmlString += "<input type=\"hidden\" name=\"SAMLResponse\" value=\"";
-        htmlString += s + "\">\n";
+        htmlString += samlResponse + "\">\n";
         htmlString += "</form>\n";
         htmlString += "<script language=\"javascript\">\n";
         htmlString += "function submit_form() {\n";

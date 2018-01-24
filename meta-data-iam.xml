@@ -1,0 +1,34 @@
+<EntityDescriptor entityID="hic.huawei.com" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+  <IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <KeyDescriptor use="signing">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>
+            MIICdDCCAd2gAwIBAgIJAKoIjn40iOcAMA0GCSqGSIb3DQEBCwUAMFMxCzAJBgNV
+            BAYTAkNOMRIwEAYDVQQIDAlHdWFuZ2RvbmcxETAPBgNVBAcMCFNoZW56aGVuMQ8w
+            DQYDVQQKDAZIdWF3ZWkxDDAKBgNVBAsMA0hJQzAeFw0xODAxMjMwMjIyNDRaFw0y
+            ODAxMjMwMjIyNDRaMFMxCzAJBgNVBAYTAkNOMRIwEAYDVQQIDAlHdWFuZ2Rvbmcx
+            ETAPBgNVBAcMCFNoZW56aGVuMQ8wDQYDVQQKDAZIdWF3ZWkxDDAKBgNVBAsMA0hJ
+            QzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAvKTHXGlK0wXLSKeqEtokx3gD
+            7z6TWz91tdOl96hjrV0ynv5LqUKF8pGHXK/Gf3W0+GjPkHbzWMg5bNW2H63YiEtz
+            ENIEkK/TxlYmRiowT5HP5cGQegOz4lItlkDTFXVA/4UdeZi0nXi7WaPS9ldDjqSl
+            C/J8l5MrDvy71WJsfqcCAwEAAaNQME4wHQYDVR0OBBYEFNA85NdCsMNkDjUDhwQW
+            DEgovAXgMB8GA1UdIwQYMBaAFNA85NdCsMNkDjUDhwQWDEgovAXgMAwGA1UdEwQF
+            MAMBAf8wDQYJKoZIhvcNAQELBQADgYEAPQYfT6zQF9SY1NKY+/jVN3h0JKtRBNU8
+            NRRHqawtYM5v0z4CA0EDu+Ak0TjshyKAIYLoSAMV3803tJeOoObvkG4ojv30Hr76
+            7SUoYSa9caCRYiE2P1GzZvHP2s667/sxV1t2kI11UYeEgpgMCKB5WrP5y4lkx9Sp
+            Hok/wXenv7E=
+          </X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+    <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+    <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+    <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" FriendlyName="E-Mail Address" xmlns="urn:oasis:names:tc:SAML:2.0:assertion"/>
+    <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" FriendlyName="Given Name" xmlns="urn:oasis:names:tc:SAML:2.0:assertion"/>
+    <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" FriendlyName="Name" xmlns="urn:oasis:names:tc:SAML:2.0:assertion"/>
+    <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" FriendlyName="Surname" xmlns="urn:oasis:names:tc:SAML:2.0:assertion"/>
+    <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" FriendlyName="Name ID" xmlns="urn:oasis:names:tc:SAML:2.0:assertion"/>
+  </IDPSSODescriptor>
+</EntityDescriptor>

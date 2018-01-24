@@ -63,10 +63,9 @@ public class SamlAssertionProducer {
 
             AuthnStatement authnStatement = createAuthnStatement(authenticationTime);
 
-            Assertion assertion = createAssertion(new DateTime(), subject, assertionIssuer, authnStatement, attributeStatement, conditions);
+            Assertion assertion = createAssertion(new DateTime(), subject, assertionIssuer, authnStatement, attributeStatement, conditions, signature);
 
             Response response = createResponse(new DateTime(), responseIssuer, status, assertion);
-            response.setSignature(signature);
 
             ResponseMarshaller marshaller = new ResponseMarshaller();
             Element element = marshaller.marshall(response);
@@ -119,9 +118,10 @@ public class SamlAssertionProducer {
     }
 
     private Assertion createAssertion(final DateTime issueDate, Subject subject, Issuer issuer, AuthnStatement authnStatement,
-                                      AttributeStatement attributeStatement, Conditions conditions) {
+                                      AttributeStatement attributeStatement, Conditions conditions, Signature signature) {
         AssertionBuilder assertionBuilder = new AssertionBuilder();
         Assertion assertion = assertionBuilder.buildObject();
+        assertion.setSignature(signature);
         assertion.setID(genNewID());
         assertion.setIssueInstant(issueDate);
         assertion.setSubject(subject);
@@ -260,6 +260,10 @@ public class SamlAssertionProducer {
 
         ConditionsBuilder conditionsBuilder = new ConditionsBuilder();
         Conditions conditions = conditionsBuilder.buildObject();
+        DateTime notBefore = new DateTime();
+        DateTime notOnOrAfter = notBefore.plusDays(3);
+        conditions.setNotBefore(notBefore);
+        conditions.setNotOnOrAfter(notOnOrAfter);
         conditions.getConditions().add(audienceRestriction);
 
         return conditions;
